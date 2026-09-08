@@ -2,7 +2,9 @@
 
 Russian is the source language. English translations mirror `ru/changelogs/<build>.md` at `changelogs/<build>.md` and carry `ai-translated`.
 
-Use the EyeAuras release heading and version-only frontmatter title. The body contains a user-facing introduction, a horizontal rule, then `## Bugfixes/Improvements` with `* **[Component]** text` entries.
+Use the EyeAuras release heading and version-only frontmatter title. A feature introduction is optional. Include it only when there is a substantial user-facing capability worth explaining; do not repeat the fixes list or add filler such as "maintenance release" or "no new features".
+
+When a feature introduction is present, follow it with a horizontal rule and `## Bugfixes/Improvements`. Otherwise, place `## Bugfixes/Improvements` directly after the release heading, without an empty feature section or a horizontal rule. Use `* **[Component]** text` entries in both cases. Apply the same structure in RU and EN. Keep concrete changes in the component entries when removing an introduction.
 
 These historical notes were authored on 2026-09-08. Frontmatter dates record the successful release publication time in UTC. The release feed was checked at https://files.eyeauras.net/poebane/alpha/RELEASES-LIST.
 

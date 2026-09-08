@@ -103,6 +103,18 @@ Rules:
 - Keep it short and direct: *what it is / how to use it / when*. One strong explanation beats three.
 - Ground every code sample in `poebane.d.ts`. Never invent API in an article.
 
+## Changelogs
+
+- Follow `changelogs/README.md` for release formatting and provenance.
+- Feature prose is optional. Include it only for substantial user-facing capabilities that need
+  explanation. Do not write a generic release summary, repeat the fixes list, or say that there
+  are no new features merely to fill the introduction.
+- If there is no feature prose, place `## Bugfixes/Improvements` immediately after the release
+  heading. Omit the feature section and its horizontal rule entirely.
+- If feature prose is present, separate it from `## Bugfixes/Improvements` with a horizontal rule.
+- Use `* **[Component]** text` entries. Preserve concrete changes in these entries when removing
+  an introduction, and keep Russian and English structures aligned.
+
 ## What is and isn't published
 
 - **`README.md` and `AGENTS.md` never publish** (repo-internal). Technical files like this one carry
