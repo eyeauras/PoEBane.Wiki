@@ -34,3 +34,7 @@ The first entry is 0.2.93, the first traceable successful publication after the 
 | 0.2.146 | 20260908T145755+0000 | [d5648273965eeca23b79e28c981b424392926568](https://github.com/eyeauras/PoEBane.Rust/commit/d5648273965eeca23b79e28c981b424392926568) | [Build 31506](https://build.eyeauras.net/viewLog.html?buildId=31506) |
 | 0.2.147 | 20260908T231224+0000 | [8e39f8fa3d9543e17d1d79da21c1debb53b9de58](https://github.com/eyeauras/PoEBane.Rust/commit/8e39f8fa3d9543e17d1d79da21c1debb53b9de58) | [Build 31509](https://build.eyeauras.net/viewLog.html?buildId=31509) |
 | 0.2.149 | 20260909T104004+0000 | [e9b42d7e6d46c26bb666fd9a659933e9a748f82f](https://github.com/eyeauras/PoEBane.Rust/commit/e9b42d7e6d46c26bb666fd9a659933e9a748f82f) | [Build 31517](https://build.eyeauras.net/viewLog.html?buildId=31517) |
+
+## Pending release
+
+0.2.151 notes are approved drafts (`published: false`), covering changes after 0.2.149 through source [7e34447b08399fc04b5530b053fd04b4be1af83a](https://github.com/eyeauras/PoEBane.Rust/commit/7e34447b08399fc04b5530b053fd04b4be1af83a). Draft timestamps record authoring time. After successful publication, set both pages to published, replace their dates with the publication time, and add the verified build to the provenance table.
