@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2HotkeyObservation
 
-[API index](../index)
+[API index](../index.md)
 
 Live state for one typed hotkey gesture. Clones share one coordinator subscription; dropping
 or stopping the last handle releases its physical registration.
@@ -37,5 +37,9 @@ Current physical state, or null before the first baseline / after Stop.
 Stop(): void;
 ```
 
-Idempotently release this shared subscription.
+Stops the observation and releases its physical subscription.
+
+**@keywords**
+
+hotkey, observation, subscription, cleanup
 

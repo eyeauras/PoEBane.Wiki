@@ -10,7 +10,7 @@ editor: markdown
 
 # ItemKind
 
-[API index](../index)
+[API index](../index.md)
 
 Content classification, not an item-instance ID. Equal kinds can occur more than once;
 callers selecting a particular UI option must reject ambiguous matches.

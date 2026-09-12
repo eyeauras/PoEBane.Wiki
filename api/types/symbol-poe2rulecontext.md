@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2RuleContext
 
-[API index](../index)
+[API index](../index.md)
 
 Values armed by the native rule engine for the current predicate/action invocation.
 

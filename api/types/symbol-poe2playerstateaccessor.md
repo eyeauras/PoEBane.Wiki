@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2PlayerStateAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## LastRespawnedAtMs
 

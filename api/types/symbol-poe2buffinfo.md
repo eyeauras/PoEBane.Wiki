@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2BuffInfo
 
-[API index](../index)
+[API index](../index.md)
 
 Current buff facts. `Charges` is the live-verified stack count.
 

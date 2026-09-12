@@ -10,7 +10,7 @@ editor: markdown
 
 # Random
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Random(min: number, max: number): number;

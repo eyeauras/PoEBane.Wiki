@@ -10,7 +10,7 @@ editor: markdown
 
 # Party
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Party: Poe2PartyAccessor;

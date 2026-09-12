@@ -10,7 +10,7 @@ editor: markdown
 
 # Warn
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Warn(message: string): void;

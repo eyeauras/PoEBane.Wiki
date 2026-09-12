@@ -10,7 +10,7 @@ editor: markdown
 
 # Key
 
-[API index](../index)
+[API index](../index.md)
 
 ## A
 
@@ -670,6 +670,12 @@ LeftCtrl = "LeftCtrl",
 
 ```typescript
 RightCtrl = "RightCtrl",
+```
+
+## GenericAlt
+
+```typescript
+GenericAlt = "GenericAlt",
 ```
 
 ## LeftAlt

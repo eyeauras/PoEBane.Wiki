@@ -10,7 +10,7 @@ editor: markdown
 
 # Flasks
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Flasks: Poe2FlasksAccessor;

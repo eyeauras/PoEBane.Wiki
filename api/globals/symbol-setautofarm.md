@@ -10,7 +10,7 @@ editor: markdown
 
 # SetAutoFarm
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SetAutoFarm(enabled: boolean): void;

@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2ItemsOnGroundAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## Count
 

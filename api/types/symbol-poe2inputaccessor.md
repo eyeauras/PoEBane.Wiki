@@ -10,7 +10,10 @@ editor: markdown
 
 # Poe2InputAccessor
 
-[API index](../index)
+[API index](../index.md)
+
+Direct keyboard and mouse input without an HTN task.
+Commands return no completion promise; use `task.Input` for awaitable task actions.
 
 ## InputSimulatorLabel
 
@@ -59,7 +62,9 @@ Accepts both generated `Key` values and string aliases (for example `"esc"`).
 KeyPress(key: Key | string, keyPressDelay?: number | null): void;
 ```
 
-Queue a key press with the requested hold duration. Execution follows the automation input gates.
+Queues a direct key press without creating a task. Returns before input completion;
+`await` does not wait for this command. Use `task.Input.KeyPress` for a task action.
+Execution follows the automation input gates.
 
 **Parameter `keyPressDelay`**
 
@@ -87,7 +92,8 @@ KeyUp(key: Key | string): void;
 ReleaseAll(): void;
 ```
 
-Release exactly the keys held by this script. Panic-safe when Automation is gated.
+Releases keyboard keys tracked as held by direct script input; does not cancel HTN tasks.
+Panic-safe when Automation is gated. Use MouseUp for directly held mouse buttons.
 
 ## MouseMoveToClient
 

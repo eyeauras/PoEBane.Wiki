@@ -10,7 +10,7 @@ editor: markdown
 
 # NotInPeacefulArea
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const NotInPeacefulArea: boolean;
@@ -18,7 +18,7 @@ const NotInPeacefulArea: boolean;
 
 True when the current area is known not to be peaceful. Unknown area data returns false.
 This means neither town nor hideout; it is not a separate combat-zone flag or a check for combat.
-Prefer this guard to negating IsInPeacefulArea, whose null value would also pass negation.
+Unlike !IsInPeacefulArea, this explicit guard also requires known area data.
 
 **@keywords**
 

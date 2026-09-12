@@ -10,7 +10,7 @@ editor: markdown
 
 # OnNetworkMessage
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function OnNetworkMessage(channel?: string | null): NetworkMessageRuleBuilderContext;

@@ -10,7 +10,7 @@ editor: markdown
 
 # WaitUntil
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function WaitUntil(condition: () => boolean, options?: WaitUntilOptions): boolean;

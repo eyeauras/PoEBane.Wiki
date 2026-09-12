@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2ClockAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Live script-facing wrapper over [`Poe2Game::clock`].
 

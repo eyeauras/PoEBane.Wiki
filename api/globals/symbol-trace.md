@@ -10,7 +10,7 @@ editor: markdown
 
 # Trace
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Trace(message: string): void;

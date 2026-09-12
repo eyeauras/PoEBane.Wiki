@@ -10,7 +10,7 @@ editor: markdown
 
 # Corpses
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Corpses: EntityList;

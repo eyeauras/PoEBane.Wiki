@@ -10,7 +10,7 @@ editor: markdown
 
 # AscendancyInfo
 
-[API index](../index)
+[API index](../index.md)
 
 A resolved native ascendancy. Id is stable; Name is localized.
 

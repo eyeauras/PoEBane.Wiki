@@ -10,7 +10,7 @@ editor: markdown
 
 # clearTimeout
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function clearTimeout(handle: number): void;

@@ -10,7 +10,7 @@ editor: markdown
 
 # DisableAllGroups
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function DisableAllGroups(): void;

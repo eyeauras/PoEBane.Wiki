@@ -10,7 +10,7 @@ editor: markdown
 
 # GameUi
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const GameUi: Poe2UiAccessor;

@@ -10,7 +10,7 @@ editor: markdown
 
 # MonsterRarity
 
-[API index](../index)
+[API index](../index.md)
 
 ## Normal
 

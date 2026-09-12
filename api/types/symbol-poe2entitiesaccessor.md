@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2EntitiesAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## Player
 

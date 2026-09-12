@@ -10,7 +10,7 @@ editor: markdown
 
 # AllMonsters
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const AllMonsters: EntityList;

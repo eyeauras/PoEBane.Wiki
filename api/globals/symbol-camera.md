@@ -10,7 +10,7 @@ editor: markdown
 
 # Camera
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Camera: Poe2CameraAccessor;

@@ -10,7 +10,7 @@ editor: markdown
 
 # SkillInfo
 
-[API index](../index)
+[API index](../index.md)
 
 One observed skill, shared by player, weapon-swap, entity and buff-source lookups.
 Scalar facts belong to the lookup frame; read the owner again for updated facts.

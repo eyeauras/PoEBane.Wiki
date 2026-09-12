@@ -10,7 +10,7 @@ editor: markdown
 
 # IsLeftPanelOpen
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const IsLeftPanelOpen: boolean;

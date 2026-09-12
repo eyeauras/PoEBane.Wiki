@@ -10,7 +10,7 @@ editor: markdown
 
 # Wait
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Wait(milliseconds: number): void;

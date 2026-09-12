@@ -10,7 +10,7 @@ editor: markdown
 
 # ItemsOnGround
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const ItemsOnGround: Poe2ItemsOnGroundAccessor;

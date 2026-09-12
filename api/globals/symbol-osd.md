@@ -10,7 +10,7 @@ editor: markdown
 
 # Osd
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Osd: Poe2OsdAccessor;

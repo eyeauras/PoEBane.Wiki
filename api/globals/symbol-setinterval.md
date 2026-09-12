@@ -10,7 +10,7 @@ editor: markdown
 
 # setInterval
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function setInterval(callback: (...args: any[]) => unknown, milliseconds?: number, ...arguments: unknown[]): number;

@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2AiAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Script-facing surface over the PoE2 AI behavior registry — `World.Ai` in scripts.
 

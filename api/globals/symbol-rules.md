@@ -10,7 +10,7 @@ editor: markdown
 
 # Rules
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Rules: Poe2RuleContext;

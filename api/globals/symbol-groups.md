@@ -10,7 +10,7 @@ editor: markdown
 
 # Groups
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Groups(): GroupScope[];

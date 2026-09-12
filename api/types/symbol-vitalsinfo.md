@@ -10,7 +10,7 @@ editor: markdown
 
 # VitalsInfo
 
-[API index](../index)
+[API index](../index.md)
 
 ## HP
 

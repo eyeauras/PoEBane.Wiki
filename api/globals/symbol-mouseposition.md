@@ -10,7 +10,7 @@ editor: markdown
 
 # MousePosition
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const MousePosition: Vector2;

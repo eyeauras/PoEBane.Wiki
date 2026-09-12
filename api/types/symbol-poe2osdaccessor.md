@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2OsdAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## DefaultTextOutlineColor
 
@@ -44,7 +44,7 @@ AddFloatingTextAtPlayer(text: string, color?: Color | null): void;
 ```
 
 Floating text above the player. PER-FRAME (no built-in TTL): re-issue it every tick to keep
-it visible, or use [`WithTtl`](Self::WithTtl) to persist it. Queues through the script
+it visible, or use [`WithTtl`](#withttl) to persist it. Queues through the script
 host-command path (`AddFloatingTextAtPlayer` host command); implemented by the runtime
 dispatcher — this accessor method performs no drawing.
 
@@ -54,7 +54,7 @@ dispatcher — this accessor method performs no drawing.
 AddFloatingTextAtPlayerWithOutline(text: string, color: Color | null, outline_color: Color, outline_thickness: number): void;
 ```
 
-[`AddFloatingTextAtPlayer`](Self::AddFloatingTextAtPlayer) with an explicit outline.
+[`AddFloatingTextAtPlayer`](#addfloatingtextatplayer) with an explicit outline.
 PER-FRAME (no built-in TTL).
 
 ## AddFloatingTextInWorld
@@ -64,7 +64,7 @@ AddFloatingTextInWorld(position: Vector3, text: string, color?: Color | null): v
 ```
 
 Floating text at a world position. PER-FRAME (no built-in TTL): re-issue every tick or use
-[`WithTtl`](Self::WithTtl) to persist. The runtime dispatcher pushes the `DisplayText` host
+[`WithTtl`](#withttl) to persist. The runtime dispatcher pushes the `DisplayText` host
 command and the automation manager's OSD drain renders it.
 
 ## AddFloatingTextInWorldWithOutline
@@ -73,7 +73,7 @@ command and the automation manager's OSD drain renders it.
 AddFloatingTextInWorldWithOutline(position: Vector3, text: string, color: Color | null, outline_color: Color, outline_thickness: number): void;
 ```
 
-[`AddFloatingTextInWorld`](Self::AddFloatingTextInWorld) with an explicit outline. PER-FRAME
+[`AddFloatingTextInWorld`](#addfloatingtextinworld) with an explicit outline. PER-FRAME
 (no built-in TTL).
 
 ## AddLineInWorld
@@ -83,7 +83,7 @@ AddLineInWorld(start: Vector3, end: Vector3, color: Color, thickness?: number | 
 ```
 
 World-space line. PER-FRAME (no built-in TTL): re-issue every tick or use
-[`WithTtl`](Self::WithTtl) to persist. Default thickness 1.0. The runtime dispatcher pushes
+[`WithTtl`](#withttl) to persist. Default thickness 1.0. The runtime dispatcher pushes
 the `DrawLine` host command.
 
 ## DrawArrowInWorld
@@ -93,7 +93,7 @@ DrawArrowInWorld(start: Vector3, end: Vector3, color: Color, thickness?: number 
 ```
 
 World-space arrow. PER-FRAME (no built-in TTL): re-issue every tick (e.g. from `OnTimer(0)`)
-to keep it visible, or use [`WithTtl`](Self::WithTtl) to persist it. Default thickness 2.0
+to keep it visible, or use [`WithTtl`](#withttl) to persist it. Default thickness 2.0
 (arrows default thicker than lines). The runtime dispatcher pushes the `DrawArrow` host
 command.
 
@@ -104,7 +104,7 @@ DrawRectInClient(rect: RectangleF, color: Color, thickness?: number | null): voi
 ```
 
 Client-space rectangle. PER-FRAME (no built-in TTL): re-issue every tick or use
-[`WithTtl`](Self::WithTtl) to persist. Default thickness 1.0. The runtime dispatcher pushes
+[`WithTtl`](#withttl) to persist. Default thickness 1.0. The runtime dispatcher pushes
 the `DrawRectInClient` host command.
 
 ## DrawTextInClient
@@ -114,7 +114,7 @@ DrawTextInClient(position: Vector2, text: string, color?: Color | null): void;
 ```
 
 Client-space text. PER-FRAME (no built-in TTL): re-issue every tick or use
-[`WithTtl`](Self::WithTtl) to persist. The runtime dispatcher pushes the
+[`WithTtl`](#withttl) to persist. The runtime dispatcher pushes the
 `DrawTextInClient` host command.
 
 ## Clear

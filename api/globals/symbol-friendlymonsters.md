@@ -10,7 +10,7 @@ editor: markdown
 
 # FriendlyMonsters
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const FriendlyMonsters: EntityList;

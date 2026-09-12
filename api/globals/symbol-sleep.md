@@ -10,7 +10,7 @@ editor: markdown
 
 # Sleep
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Sleep(milliseconds: number): void;

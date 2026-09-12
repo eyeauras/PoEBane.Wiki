@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2FlaskAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 A belt-slot value stored directly in the generated native script object.
 

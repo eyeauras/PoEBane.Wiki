@@ -10,7 +10,7 @@ editor: markdown
 
 # Input
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Input: Poe2InputAccessor;

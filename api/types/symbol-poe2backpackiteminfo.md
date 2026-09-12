@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2BackpackItemInfo
 
-[API index](../index)
+[API index](../index.md)
 
 One backpack item projected to plain script data (the facade-data equivalent of iterating the C#
 `Inventory.Backpack` server inventory). Grid position + size come from the server slot; name /

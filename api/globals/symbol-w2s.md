@@ -10,7 +10,7 @@ editor: markdown
 
 # W2S
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function W2S(worldPosition: Vector3): Vector2;

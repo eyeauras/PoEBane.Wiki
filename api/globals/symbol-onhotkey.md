@@ -10,7 +10,7 @@ editor: markdown
 
 # OnHotkey
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function OnHotkey(gesture: Key | string, scope?: HotkeyScope | null): RuleBuilderContext;

@@ -10,7 +10,7 @@ editor: markdown
 
 # AilmentKind
 
-[API index](../index)
+[API index](../index.md)
 
 ## Bleeding
 

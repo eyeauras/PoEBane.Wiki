@@ -10,7 +10,7 @@ editor: markdown
 
 # Vector3
 
-[API index](../index)
+[API index](../index.md)
 
 ## X
 

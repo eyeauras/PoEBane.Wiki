@@ -10,7 +10,7 @@ editor: markdown
 
 # Ascendancy
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Ascendancy: Poe2AscendancyIds;

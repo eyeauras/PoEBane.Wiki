@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2NetworkAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Script-facing network-message commands — `World.Network`.
 

@@ -10,7 +10,7 @@ editor: markdown
 
 # Ailments
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Ailments: Poe2AilmentsAccessor;

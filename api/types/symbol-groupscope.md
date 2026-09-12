@@ -10,7 +10,7 @@ editor: markdown
 
 # GroupScope
 
-[API index](../index)
+[API index](../index.md)
 
 A named rule group that enables or suppresses its rules together.
 Create grouped rules on this handle or pass it to a rule builder's `.Group(...)`.

@@ -10,7 +10,7 @@ editor: markdown
 
 # Animation
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Animation: string;

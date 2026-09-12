@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2PartyAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## Members
 

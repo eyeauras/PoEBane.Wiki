@@ -10,7 +10,7 @@ editor: markdown
 
 # Skills
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Skills: Poe2SkillsAccessor;

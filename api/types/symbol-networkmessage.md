@@ -10,7 +10,7 @@ editor: markdown
 
 # NetworkMessage
 
-[API index](../index)
+[API index](../index.md)
 
 Typed data delivered to an `OnNetworkMessage(...).If(...).Do(...)` rule.
 

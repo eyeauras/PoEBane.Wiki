@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2StatusEffect
 
-[API index](../index)
+[API index](../index.md)
 
 One observed buff instance. Missing named lookups return Exists=false and zero-valued status fields.
 

@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2AutomationAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Script-facing surface over the global Automation toggle — `World.Automation` in scripts.
 

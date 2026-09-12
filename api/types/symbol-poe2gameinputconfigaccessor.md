@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2GameInputConfigAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Input bindings for the game's current supported control mode.
 

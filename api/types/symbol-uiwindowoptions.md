@@ -10,7 +10,7 @@ editor: markdown
 
 # UiWindowOptions
 
-[API index](../index)
+[API index](../index.md)
 
 ## Title
 

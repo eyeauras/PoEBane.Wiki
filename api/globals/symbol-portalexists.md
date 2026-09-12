@@ -10,7 +10,7 @@ editor: markdown
 
 # PortalExists
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function PortalExists(distance?: number | null): boolean;

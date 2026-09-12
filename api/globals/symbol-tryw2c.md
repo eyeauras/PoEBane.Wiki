@@ -10,7 +10,7 @@ editor: markdown
 
 # TryW2C
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function TryW2C(worldPosition: Vector3): Vector2 | null;

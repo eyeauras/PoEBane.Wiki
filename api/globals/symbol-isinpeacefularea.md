@@ -10,13 +10,13 @@ editor: markdown
 
 # IsInPeacefulArea
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
-const IsInPeacefulArea: boolean | null;
+const IsInPeacefulArea: boolean;
 ```
 
-Whether the current area is a town or hideout; null when area data is unavailable.
+Whether the current area is a town or hideout; false when area data is unavailable.
 This classification does not detect nearby enemies or whether combat is occurring.
 
 **@keywords**

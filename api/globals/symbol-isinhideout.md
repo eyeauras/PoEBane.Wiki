@@ -10,9 +10,15 @@ editor: markdown
 
 # IsInHideout
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
-const IsInHideout: boolean | null;
+const IsInHideout: boolean;
 ```
+
+Whether the current area is a hideout; false when area data is unavailable.
+
+**@keywords**
+
+area, hideout, condition
 

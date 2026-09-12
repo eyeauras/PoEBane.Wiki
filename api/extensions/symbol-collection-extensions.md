@@ -10,7 +10,7 @@ editor: markdown
 
 # collection-extensions
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 interface OrderedArray<T> extends Array<T> {

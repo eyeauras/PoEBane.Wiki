@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2GroundItemInfo
 
-[API index](../index)
+[API index](../index.md)
 
 ## Entity
 

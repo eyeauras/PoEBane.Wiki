@@ -10,7 +10,7 @@ editor: markdown
 
 # IsMoving
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const IsMoving: boolean;

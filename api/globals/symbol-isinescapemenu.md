@@ -10,7 +10,7 @@ editor: markdown
 
 # IsInEscapeMenu
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const IsInEscapeMenu: boolean;

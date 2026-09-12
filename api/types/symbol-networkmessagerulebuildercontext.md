@@ -10,7 +10,7 @@ editor: markdown
 
 # NetworkMessageRuleBuilderContext
 
-[API index](../index)
+[API index](../index.md)
 
 Configure a network-message rule whose predicate and action receive a `NetworkMessage`.
 Fluent methods update and return the same builder; attach `.Do(...)` to handle messages.

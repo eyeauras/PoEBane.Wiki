@@ -10,7 +10,7 @@ editor: markdown
 
 # DisableGroup
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function DisableGroup(name?: string | null): void;

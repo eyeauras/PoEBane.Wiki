@@ -10,7 +10,7 @@ editor: markdown
 
 # ActorInfo
 
-[API index](../index)
+[API index](../index.md)
 
 ## Action
 

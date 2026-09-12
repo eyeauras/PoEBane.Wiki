@@ -10,7 +10,7 @@ editor: markdown
 
 # InPeacefulArea
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const InPeacefulArea: boolean;

@@ -10,7 +10,7 @@ editor: markdown
 
 # CharacterClassInfo
 
-[API index](../index)
+[API index](../index.md)
 
 A resolved native character class. Id is the stable metadata ID; Name is localized.
 

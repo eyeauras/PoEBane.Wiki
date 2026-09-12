@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2EntityPositionTarget
 
-[API index](../index)
+[API index](../index.md)
 
 A typed target accepted by `Entity.distanceTo`, `directionTo`, and `angleTo`.
 

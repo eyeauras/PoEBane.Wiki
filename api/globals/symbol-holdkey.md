@@ -10,7 +10,7 @@ editor: markdown
 
 # HoldKey
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function HoldKey(key: Key | string): void;

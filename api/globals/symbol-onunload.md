@@ -10,7 +10,7 @@ editor: markdown
 
 # OnUnload
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function OnUnload(action: () => void): void;

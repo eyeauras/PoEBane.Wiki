@@ -10,7 +10,7 @@ editor: markdown
 
 # RuleBuilderContext
 
-[API index](../index)
+[API index](../index.md)
 
 Configure a timer or hotkey rule; fluent methods update and return the same builder.
 Attach `.Do(...)` to supply the action; `.If(...)`, `.Cooldown(...)` and `.Group(...)` constrain firing.
@@ -86,7 +86,9 @@ Press-edge, hotkey-scope and group checks still apply; keep an emergency stop un
 While inactive, applied commands are limited to `Input.KeyUp`/`Input.ReleaseAll`, behavior
 setters with `false`, `Automation.SetEnabled(false)`, and OSD drawing/clearing. Other queued
 commands are dropped. Group operations act directly; `DisableAllGroups()` can also suppress
-grouped panic hotkeys. This does not grant unrestricted input or background automation.
+grouped panic hotkeys. `World.Tasks.CancelAll()` cancels this runtime's tasks, including frozen
+or yielded work, and releases their owned input. This does not grant unrestricted input or
+background automation.
 
 **@throws**
 

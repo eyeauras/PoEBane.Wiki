@@ -10,7 +10,7 @@ editor: markdown
 
 # ReleaseKey
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function ReleaseKey(key: Key | string): void;

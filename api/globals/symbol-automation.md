@@ -10,7 +10,7 @@ editor: markdown
 
 # Automation
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Automation: Poe2AutomationAccessor;

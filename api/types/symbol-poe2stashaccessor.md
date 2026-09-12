@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2StashAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Stash status shortcuts over the canonical stash UI element.
 

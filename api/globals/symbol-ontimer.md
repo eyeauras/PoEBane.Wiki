@@ -10,7 +10,7 @@ editor: markdown
 
 # OnTimer
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function OnTimer(interval_ms: number): RuleBuilderContext;

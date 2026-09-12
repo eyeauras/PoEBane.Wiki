@@ -10,7 +10,7 @@ editor: markdown
 
 # CurrentTickMs
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const CurrentTickMs: number;

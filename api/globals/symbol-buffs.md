@@ -10,7 +10,7 @@ editor: markdown
 
 # Buffs
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Buffs: Poe2BuffsAccessor;

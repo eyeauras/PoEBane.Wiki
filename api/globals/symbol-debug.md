@@ -10,7 +10,7 @@ editor: markdown
 
 # Debug
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Debug(message: string): void;

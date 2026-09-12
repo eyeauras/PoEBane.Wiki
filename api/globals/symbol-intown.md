@@ -10,7 +10,7 @@ editor: markdown
 
 # InTown
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const InTown: boolean;

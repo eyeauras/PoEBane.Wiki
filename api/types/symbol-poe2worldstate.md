@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2WorldState
 
-[API index](../index)
+[API index](../index.md)
 
 Access to the latest PoE2 state refreshed by game managers plus script-facing actions.
 
@@ -223,6 +223,18 @@ Network: Poe2NetworkAccessor;
 
 In-game network-message subscriptions and sends.
 
+## Tasks
+
+```typescript
+Tasks: ScriptTasks;
+```
+
+Defines and controls HTN-arbitrated script tasks.
+
+**@keywords**
+
+task, htn, automation, scheduling
+
 ## Player
 
 ```typescript
@@ -271,22 +283,34 @@ TryW2C(worldPosition: Vector3): Vector2 | null;
 ## IsInHideout
 
 ```typescript
-IsInHideout: boolean | null;
+IsInHideout: boolean;
 ```
+
+Whether the current area is a hideout; false when area data is unavailable.
+
+**@keywords**
+
+area, hideout, condition
 
 ## IsInTown
 
 ```typescript
-IsInTown: boolean | null;
+IsInTown: boolean;
 ```
+
+Whether the current area is a town; false when area data is unavailable.
+
+**@keywords**
+
+area, town, condition
 
 ## IsInPeacefulArea
 
 ```typescript
-IsInPeacefulArea: boolean | null;
+IsInPeacefulArea: boolean;
 ```
 
-Whether the current area is a town or hideout; null when area data is unavailable.
+Whether the current area is a town or hideout; false when area data is unavailable.
 This classification does not detect nearby enemies or whether combat is occurring.
 
 **@keywords**
@@ -362,7 +386,7 @@ NotInPeacefulArea: boolean;
 
 True when the current area is known not to be peaceful. Unknown area data returns false.
 This means neither town nor hideout; it is not a separate combat-zone flag or a check for combat.
-Prefer this guard to negating IsInPeacefulArea, whose null value would also pass negation.
+Unlike !IsInPeacefulArea, this explicit guard also requires known area data.
 
 **@keywords**
 
@@ -390,8 +414,14 @@ IsInEscapeMenu: boolean;
 ## AreaName
 
 ```typescript
-AreaName: string | null;
+AreaName: string;
 ```
+
+Current area name; empty when the area or its name is unavailable.
+
+**@keywords**
+
+area, name, location
 
 ## IsMoving
 
@@ -466,8 +496,15 @@ Requires feature: `PoE.Follow`.
 ## Vitals
 
 ```typescript
-Vitals: VitalsInfo | null;
+Vitals: VitalsInfo;
 ```
+
+Current player resource pools; all fields are zero when the player Life observation is unavailable.
+These defaults do not distinguish missing data from a real zero resource.
+
+**@keywords**
+
+health, mana, shield, ward, resources
 
 ## Monsters
 

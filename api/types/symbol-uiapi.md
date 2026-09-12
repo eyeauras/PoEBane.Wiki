@@ -10,7 +10,7 @@ editor: markdown
 
 # UiApi
 
-[API index](../index)
+[API index](../index.md)
 
 ## CreateWindow
 

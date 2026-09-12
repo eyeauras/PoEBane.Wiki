@@ -10,7 +10,7 @@ editor: markdown
 
 # SetAutoQuest
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SetAutoQuest(enabled: boolean): void;

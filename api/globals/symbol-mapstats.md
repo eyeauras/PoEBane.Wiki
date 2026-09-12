@@ -10,7 +10,7 @@ editor: markdown
 
 # MapStats
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const MapStats: { [index: number]: Stat } & { Has(id: number): boolean };

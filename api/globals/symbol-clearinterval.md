@@ -10,7 +10,7 @@ editor: markdown
 
 # clearInterval
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function clearInterval(handle: number): void;

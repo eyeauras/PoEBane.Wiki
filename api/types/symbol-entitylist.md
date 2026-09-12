@@ -10,7 +10,7 @@ editor: markdown
 
 # EntityList
 
-[API index](../index)
+[API index](../index.md)
 
 The unified live entity list. Cheap to `Clone` (an `Rc`-sharing enum) so it round-trips through
 the generated Boa object's owned-value storage.

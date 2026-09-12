@@ -10,9 +10,15 @@ editor: markdown
 
 # IsInTown
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
-const IsInTown: boolean | null;
+const IsInTown: boolean;
 ```
+
+Whether the current area is a town; false when area data is unavailable.
+
+**@keywords**
+
+area, town, condition
 

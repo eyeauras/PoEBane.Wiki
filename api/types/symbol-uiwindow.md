@@ -10,7 +10,7 @@ editor: markdown
 
 # UiWindow
 
-[API index](../index)
+[API index](../index.md)
 
 ## Id
 

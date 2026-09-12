@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2TradeWindow
 
-[API index](../index)
+[API index](../index.md)
 
 ## IsOpen
 

@@ -10,7 +10,7 @@ editor: markdown
 
 # Ai
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Ai: Poe2AiAccessor;

@@ -10,7 +10,7 @@ editor: markdown
 
 # SetAutoAcceptTrade
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SetAutoAcceptTrade(enabled: boolean): void;

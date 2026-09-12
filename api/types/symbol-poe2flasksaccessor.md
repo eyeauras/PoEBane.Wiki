@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2FlasksAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## Flask1
 

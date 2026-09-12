@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2CharacterClassIds
 
-[API index](../index)
+[API index](../index.md)
 
 Stable native character class IDs for script conditions.
 Constants identify metadata records; their presence does not imply a playable class.

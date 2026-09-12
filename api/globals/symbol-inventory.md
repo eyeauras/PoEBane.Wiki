@@ -10,7 +10,7 @@ editor: markdown
 
 # Inventory
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Inventory: Poe2InventoryAccessor;

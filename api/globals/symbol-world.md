@@ -10,7 +10,7 @@ editor: markdown
 
 # World
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const World: Poe2WorldState;

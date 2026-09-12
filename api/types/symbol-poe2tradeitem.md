@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2TradeItem
 
-[API index](../index)
+[API index](../index.md)
 
 ## Cell
 

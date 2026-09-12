@@ -10,7 +10,7 @@ editor: markdown
 
 # POEBANE_SCRIPT_API_HASH
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const POEBANE_SCRIPT_API_HASH: string;

@@ -10,7 +10,7 @@ editor: markdown
 
 # TryW2S
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function TryW2S(worldPosition: Vector3): Vector2 | null;

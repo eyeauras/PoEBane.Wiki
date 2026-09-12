@@ -10,7 +10,7 @@ editor: markdown
 
 # Vector2
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 interface Vector2 {

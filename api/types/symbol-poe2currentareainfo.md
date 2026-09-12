@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2CurrentAreaInfo
 
-[API index](../index)
+[API index](../index.md)
 
 ## Name
 

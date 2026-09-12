@@ -10,7 +10,7 @@ editor: markdown
 
 # Element
 
-[API index](../index)
+[API index](../index.md)
 
 A live UI-tree node. Its generated value handle is intentionally transient: an old tick's
 handle resolves to no receiver and every `native_default` member degrades to its documented

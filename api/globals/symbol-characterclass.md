@@ -10,7 +10,7 @@ editor: markdown
 
 # CharacterClass
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const CharacterClass: Poe2CharacterClassIds;

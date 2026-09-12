@@ -10,7 +10,7 @@ editor: markdown
 
 # PressKey
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function PressKey(key: Key | string): void;

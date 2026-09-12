@@ -10,7 +10,7 @@ editor: markdown
 
 # native-adapter-factories
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Vector2(x: number, y: number): Vector2;

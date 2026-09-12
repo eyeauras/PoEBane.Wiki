@@ -10,7 +10,7 @@ editor: markdown
 
 # Color
 
-[API index](../index)
+[API index](../index.md)
 
 ## R
 

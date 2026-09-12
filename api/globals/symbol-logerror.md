@@ -10,7 +10,7 @@ editor: markdown
 
 # LogError
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function LogError(message: string): void;

@@ -10,7 +10,7 @@ editor: markdown
 
 # MonsterCount
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function MonsterCount(range?: number | null, rarity?: MonsterRarity | number | null): number;

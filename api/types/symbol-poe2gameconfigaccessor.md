@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2GameConfigAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Settings observed in the attached game process.
 

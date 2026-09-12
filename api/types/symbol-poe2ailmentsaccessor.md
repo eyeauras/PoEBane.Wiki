@@ -10,13 +10,17 @@ editor: markdown
 
 # Poe2AilmentsAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## Get
 
 ```typescript
-Get(Kind: AilmentKind): boolean | null;
+Get(Kind: AilmentKind): boolean;
 ```
 
-`None` preserves an unavailable or incomplete buff source.
+Whether the ailment is observed; false when buff data is unavailable or inconclusive.
+
+**@keywords**
+
+ailments, buffs, condition
 

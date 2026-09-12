@@ -10,7 +10,7 @@ editor: markdown
 
 # WaitUntilOptions
 
-[API index](../index)
+[API index](../index.md)
 
 Configure sequential condition polling in WaitUntil.
 

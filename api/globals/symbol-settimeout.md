@@ -10,7 +10,7 @@ editor: markdown
 
 # setTimeout
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function setTimeout(callback: (...args: any[]) => unknown, milliseconds?: number, ...arguments: unknown[]): number;

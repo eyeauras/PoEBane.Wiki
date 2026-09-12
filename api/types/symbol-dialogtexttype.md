@@ -10,7 +10,7 @@ editor: markdown
 
 # DialogTextType
 
-[API index](../index)
+[API index](../index.md)
 
 Presentation of an NPC dialog option, not quest state or click eligibility.
 In particular Dimmed does not claim Disabled, and Quest can mean accept OR reward.

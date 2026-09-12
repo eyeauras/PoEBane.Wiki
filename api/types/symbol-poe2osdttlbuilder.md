@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2OsdTtlBuilder
 
-[API index](../index)
+[API index](../index.md)
 
 The TTL-draw builder returned by [`Poe2OsdAccessor::WithTtl`]. Carries the requested TTL (ms) and
 exposes the SAME draw method set as [`Poe2OsdAccessor`]; each draw enqueues into the manager's

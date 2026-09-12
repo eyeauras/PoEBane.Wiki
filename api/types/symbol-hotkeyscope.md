@@ -10,7 +10,7 @@ editor: markdown
 
 # HotkeyScope
 
-[API index](../index)
+[API index](../index.md)
 
 ## Global
 

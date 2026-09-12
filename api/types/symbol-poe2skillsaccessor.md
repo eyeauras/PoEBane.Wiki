@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2SkillsAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Skill lookups for one actor and weapon set; the native handle preserves its owner.
 

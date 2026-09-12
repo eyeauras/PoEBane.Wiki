@@ -10,7 +10,7 @@ editor: markdown
 
 # Chests
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Chests: EntityList;

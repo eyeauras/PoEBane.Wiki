@@ -10,9 +10,15 @@ editor: markdown
 
 # AreaName
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
-const AreaName: string | null;
+const AreaName: string;
 ```
+
+Current area name; empty when the area or its name is unavailable.
+
+**@keywords**
+
+area, name, location
 

@@ -10,7 +10,7 @@ editor: markdown
 
 # Entity
 
-[API index](../index)
+[API index](../index.md)
 
 A live entity handle. The generated value-handle contract owns JS identity and stale-handle
 recovery; this facade owns only typed reads over the currently resolved Rust entity.
@@ -37,6 +37,24 @@ ItemKind: ItemKind | null;
 ```
 
 Item content usable for reward/backpack comparisons; not a unique instance ID.
+
+## ItemBase
+
+```typescript
+ItemBase: Poe2ItemBase | null;
+```
+
+## ItemMods
+
+```typescript
+ItemMods: Poe2ItemMods | null;
+```
+
+## ItemStack
+
+```typescript
+ItemStack: Poe2ItemStack | null;
+```
 
 ## Id
 

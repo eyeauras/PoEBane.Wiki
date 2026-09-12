@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2AscendancyIds
 
-[API index](../index)
+[API index](../index.md)
 
 Stable native ascendancy IDs for script conditions.
 Constants identify metadata records; their presence does not imply a playable class.

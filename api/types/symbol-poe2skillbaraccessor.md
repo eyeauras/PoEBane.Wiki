@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2SkillBarAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Current player hotbar, including empty slots and their actual game bindings.
 Supports mouse/keyboard and WASD; controller or unreadable data returns null from lookups.

@@ -10,7 +10,7 @@ editor: markdown
 
 # DisplayText
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function DisplayText(text: string, worldPosition: Vector3, color?: Color | null): void;

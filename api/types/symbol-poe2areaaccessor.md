@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2AreaAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## IsValid
 

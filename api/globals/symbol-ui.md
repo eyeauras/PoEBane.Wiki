@@ -10,7 +10,7 @@ editor: markdown
 
 # UI
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const UI: UiApi;

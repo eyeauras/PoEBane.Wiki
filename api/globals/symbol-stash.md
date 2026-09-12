@@ -10,7 +10,7 @@ editor: markdown
 
 # Stash
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Stash: Poe2StashAccessor;

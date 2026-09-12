@@ -10,7 +10,7 @@ editor: markdown
 
 # NoneEntities
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const NoneEntities: EntityList;

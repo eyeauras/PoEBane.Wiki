@@ -10,7 +10,7 @@ editor: markdown
 
 # PlayerState
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const PlayerState: Poe2PlayerStateAccessor;

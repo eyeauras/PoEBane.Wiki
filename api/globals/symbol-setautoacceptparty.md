@@ -10,7 +10,7 @@ editor: markdown
 
 # SetAutoAcceptParty
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SetAutoAcceptParty(enabled: boolean): void;

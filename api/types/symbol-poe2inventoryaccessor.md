@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2InventoryAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Player backpack status and actions. The backing model is the canonical server inventory plus the
 native inventory UI panel; this type only chooses the player backpack and provides one-action
@@ -60,36 +60,6 @@ HasItemAt(x: number, y: number): boolean;
 
 Returns whether a server item occupies the requested backpack cell.
 
-## TryClickItemAt
-
-```typescript
-TryClickItemAt(x: number, y: number): boolean;
-```
-
-Requires feature: `PoE.Follow`.
-
-Left-clicks a random point inside the item occupying the requested backpack cell.
-
-## TryCtrlClickItemAt
-
-```typescript
-TryCtrlClickItemAt(x: number, y: number): boolean;
-```
-
-Requires feature: `PoE.Follow`.
-
-Ctrl-left-clicks a random point inside the item occupying the requested backpack cell.
-
-## TryClickItemAtWithModifiers
-
-```typescript
-TryClickItemAtWithModifiers(x: number, y: number, control: boolean, shift: boolean): boolean;
-```
-
-Requires feature: `PoE.Follow`.
-
-Left-clicks a random point inside the item occupying the requested backpack cell.
-
 ## TryGetBackpackClientRect
 
 ```typescript
@@ -133,4 +103,46 @@ Items: Poe2BackpackItemInfo[];
 
 Live snapshot of the player backpack items as plain data. Facade-level equivalent of iterating the
 C# `Inventory.Backpack` server inventory; non-clickable/placeholder slots are skipped.
+
+## TryClickItemAt
+
+```typescript
+TryClickItemAt(x: number, y: number): boolean;
+```
+
+Requires feature: `PoE.Follow`.
+
+Left-clicks a random point inside the item occupying the requested backpack cell.
+
+**@keywords**
+
+inventory, backpack, item, click
+
+## TryCtrlClickItemAt
+
+```typescript
+TryCtrlClickItemAt(x: number, y: number): boolean;
+```
+
+Requires feature: `PoE.Follow`.
+
+Ctrl-left-clicks a random point inside the item occupying the requested backpack cell.
+
+**@keywords**
+
+inventory, backpack, control, click
+
+## TryClickItemAtWithModifiers
+
+```typescript
+TryClickItemAtWithModifiers(x: number, y: number, control: boolean, shift: boolean): boolean;
+```
+
+Requires feature: `PoE.Follow`.
+
+Left-clicks a random point inside the item occupying the requested backpack cell.
+
+**@keywords**
+
+inventory, backpack, modifiers, click
 

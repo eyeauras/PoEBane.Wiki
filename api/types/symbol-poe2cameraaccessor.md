@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2CameraAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## IsViewReady
 

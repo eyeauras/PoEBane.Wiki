@@ -10,7 +10,7 @@ editor: markdown
 
 # InHideout
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const InHideout: boolean;

@@ -10,9 +10,16 @@ editor: markdown
 
 # Vitals
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
-const Vitals: VitalsInfo | null;
+const Vitals: VitalsInfo;
 ```
+
+Current player resource pools; all fields are zero when the player Life observation is unavailable.
+These defaults do not distinguish missing data from a real zero resource.
+
+**@keywords**
+
+health, mana, shield, ward, resources
 

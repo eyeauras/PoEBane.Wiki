@@ -10,7 +10,7 @@ editor: markdown
 
 # PlayerValid
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const PlayerValid: boolean;

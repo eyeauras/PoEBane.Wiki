@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2ScriptSandbox
 
-[API index](../index)
+[API index](../index.md)
 
 Register automation rules, manage groups, log messages, and queue behavior controls.
 
@@ -410,7 +410,7 @@ cleanup, unload, reload, lifecycle
 OnAutomationInactive(action: () => void): void;
 ```
 
-Register cleanup on each transition from active to inactive automation, before held input is released.
+Register cleanup on each transition from active to inactive automation, after task cancellation and held-input release.
 It does not repeat on inactive ticks; cleanup commands remain restricted. Its own waits may
 continue while inactive, but do not grant active automation input permissions.
 

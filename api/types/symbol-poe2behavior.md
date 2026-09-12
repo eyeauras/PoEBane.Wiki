@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2Behavior
 
-[API index](../index)
+[API index](../index.md)
 
 ## AutoStash
 
@@ -32,14 +32,6 @@ Requires feature: `PoE.Farm`.
 
 ```typescript
 AutoFollow = "AutoFollow",
-```
-
-Requires feature: `PoE.Follow`.
-
-## AutoFollowCloseWindows
-
-```typescript
-AutoFollowCloseWindows = "AutoFollowCloseWindows",
 ```
 
 Requires feature: `PoE.Follow`.

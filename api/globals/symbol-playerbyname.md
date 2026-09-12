@@ -10,7 +10,7 @@ editor: markdown
 
 # PlayerByName
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function PlayerByName(name: string): Entity | null;

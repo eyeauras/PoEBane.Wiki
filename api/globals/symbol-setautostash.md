@@ -10,7 +10,7 @@ editor: markdown
 
 # SetAutoStash
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SetAutoStash(enabled: boolean): void;

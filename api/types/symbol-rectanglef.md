@@ -10,7 +10,7 @@ editor: markdown
 
 # RectangleF
 
-[API index](../index)
+[API index](../index.md)
 
 A script-facing native structural projection of one client rectangle.
 

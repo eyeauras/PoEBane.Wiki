@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2BuffCollectionAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Available live buff rows for one owner, preserving duplicates and unreadable-entry counts.
 

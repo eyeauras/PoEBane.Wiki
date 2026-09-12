@@ -10,7 +10,7 @@ editor: markdown
 
 # SinceLastActivation
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SinceLastActivation(minTime: number): boolean;

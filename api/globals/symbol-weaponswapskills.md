@@ -10,7 +10,7 @@ editor: markdown
 
 # WeaponSwapSkills
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const WeaponSwapSkills: Poe2SkillsAccessor;

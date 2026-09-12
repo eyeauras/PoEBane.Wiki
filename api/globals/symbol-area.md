@@ -10,7 +10,7 @@ editor: markdown
 
 # Area
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Area: Poe2AreaAccessor;

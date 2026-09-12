@@ -10,7 +10,7 @@ editor: markdown
 
 # NotInTown
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const NotInTown: boolean;

@@ -10,7 +10,7 @@ editor: markdown
 
 # Monsters
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Monsters(range?: number | null, rarity?: MonsterRarity | number | null): EntityList;

@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2QuestRewardOption
 
-[API index](../index)
+[API index](../index.md)
 
 ## Element
 

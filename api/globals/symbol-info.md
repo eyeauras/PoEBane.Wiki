@@ -10,7 +10,7 @@ editor: markdown
 
 # Info
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function Info(message: string): void;

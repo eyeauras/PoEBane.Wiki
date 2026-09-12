@@ -10,7 +10,7 @@ editor: markdown
 
 # MouseButton
 
-[API index](../index)
+[API index](../index.md)
 
 ## Left
 

@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2BuffsAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 Lossless buff queries for one actor. Named lookup selects the first readable instance.
 

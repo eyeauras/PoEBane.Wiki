@@ -10,7 +10,7 @@ editor: markdown
 
 # Stat
 
-[API index](../index)
+[API index](../index.md)
 
 ## Exists
 

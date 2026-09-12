@@ -10,7 +10,7 @@ editor: markdown
 
 # ActiveWeaponSetIndex
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const ActiveWeaponSetIndex: number;

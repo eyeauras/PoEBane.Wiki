@@ -10,7 +10,7 @@ editor: markdown
 
 # Entries
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Entries: Poe2EntitiesAccessor;

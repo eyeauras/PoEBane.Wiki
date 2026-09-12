@@ -10,7 +10,7 @@ editor: markdown
 
 # SetAutoPickup
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 function SetAutoPickup(enabled: boolean): void;

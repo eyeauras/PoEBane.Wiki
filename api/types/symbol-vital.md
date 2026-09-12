@@ -10,7 +10,7 @@ editor: markdown
 
 # Vital
 
-[API index](../index)
+[API index](../index.md)
 
 ## Current
 
@@ -27,6 +27,12 @@ Max: number;
 ## Percent
 
 ```typescript
-Percent?: number | null;
+Percent: number;
 ```
+
+Percentage of the unreserved maximum, from 0 to 100. Zero for a missing or invalid sample, including a zero maximum.
+
+**@keywords**
+
+health, mana, shield, ward, percentage
 

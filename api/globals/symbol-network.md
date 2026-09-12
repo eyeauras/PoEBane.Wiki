@@ -10,7 +10,7 @@ editor: markdown
 
 # Network
 
-[API index](../index)
+[API index](../index.md)
 
 ```typescript
 const Network: Poe2NetworkAccessor;

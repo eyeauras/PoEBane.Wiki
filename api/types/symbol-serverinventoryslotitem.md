@@ -10,7 +10,7 @@ editor: markdown
 
 # ServerInventorySlotItem
 
-[API index](../index)
+[API index](../index.md)
 
 One occupied region of a server inventory, exposed as a live transient script handle.
 

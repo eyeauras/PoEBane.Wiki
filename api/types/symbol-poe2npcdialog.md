@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2NpcDialog
 
-[API index](../index)
+[API index](../index.md)
 
 ## IsVisible
 

@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2SkillBarSlot
 
-[API index](../index)
+[API index](../index.md)
 
 One observed slot and its binding. Look it up again for current readiness.
 Scalar fields are a snapshot; retaining the slot does not freeze the game's assignment for Press().

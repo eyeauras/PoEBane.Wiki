@@ -10,7 +10,7 @@ editor: markdown
 
 # Poe2UiAccessor
 
-[API index](../index)
+[API index](../index.md)
 
 ## RootAddress
 
@@ -327,7 +327,7 @@ InstanceManagerPanel: Element | null;
 ## RitualWindow
 
 ```typescript
-RitualWindow: Element | null;
+RitualWindow: Poe2RitualWindow | null;
 ```
 
 ## ChallengesPanel
