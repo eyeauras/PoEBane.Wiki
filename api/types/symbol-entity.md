@@ -200,6 +200,20 @@ Returns null when either position is unavailable.
 
 distance, world, position, player
 
+## HasLineOfSight
+
+```typescript
+HasLineOfSight: boolean | null;
+```
+
+Whether the terrain targeting layer has a clear straight line between the player and this
+entity: walls block it, ledges do not. Doors follow the terrain refresh after they open or
+close; skill-created walls are not included. Returns null when terrain or a position is unavailable.
+
+**@keywords**
+
+line of sight, visibility, obstacle, wall, targeting
+
 ## Position
 
 ```typescript

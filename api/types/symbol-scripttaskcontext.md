@@ -99,8 +99,12 @@ task, checkpoint, phase, validation, cancellation
 MoveToGrid(Destination: Vector2, ArrivalRadiusGrid: number): Promise<void>;
 ```
 
+Requires feature: `PoE.Follow`.
+
 Moves through the native pathfinding stack until reaching the grid destination radius.
 Uses the normal movement goal and replanning policy; higher-priority HTN work can suspend it.
+Without the Follow feature it rejects with code `SCRIPT_TASK_FEATURE_UNAVAILABLE` before moving;
+losing the feature stops the move and rejects the same way.
 
 **@keywords**
 
