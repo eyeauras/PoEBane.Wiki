@@ -99,7 +99,7 @@ Scale: number;
 ## Stats
 
 ```typescript
-Stats: { [index: number]: Stat } & { Has(id: number): boolean };
+Stats: { [id: string]: Stat } & { Has(id: string): boolean };
 ```
 
 ## States
@@ -135,8 +135,15 @@ Distance: number;
 ## IsUsingAbility
 
 ```typescript
-IsUsingAbility: boolean;
+IsUsingAbility?: boolean | null;
 ```
+
+Whether the entity's current action has started; walking alone does not set it, casting on the move
+does. `null` when this frame has no Actor snapshot of it, including entities without an Actor.
+
+**@keywords**
+
+casting, attacking, action, busy
 
 ## PlayerName
 

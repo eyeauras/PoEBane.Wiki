@@ -13,6 +13,6 @@ editor: markdown
 [API index](../index.md)
 
 ```typescript
-const MapStats: { [index: number]: Stat } & { Has(id: number): boolean };
+const MapStats: { [id: string]: Stat } & { Has(id: string): boolean };
 ```
 

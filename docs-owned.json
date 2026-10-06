@@ -1,10 +1,12 @@
 {
-  "apiHash": "b63826af130ec164",
+  "apiHash": "69e3a50d19574892",
   "files": [
     "api/extensions/symbol-collection-extensions.md",
     "api/extensions/symbol-fetch-native-classes.md",
     "api/extensions/symbol-game-stat-table.md",
     "api/extensions/symbol-native-adapter-factories.md",
+    "api/globals/symbol-actionblocksordinaryskill.md",
+    "api/globals/symbol-actionstate.md",
     "api/globals/symbol-activeweaponsetindex.md",
     "api/globals/symbol-ai.md",
     "api/globals/symbol-ailments.md",
@@ -145,6 +147,7 @@
     "api/types/symbol-mousebutton.md",
     "api/types/symbol-networkmessage.md",
     "api/types/symbol-networkmessagerulebuildercontext.md",
+    "api/types/symbol-playeractionstate.md",
     "api/types/symbol-poe2aiaccessor.md",
     "api/types/symbol-poe2ailmentsaccessor.md",
     "api/types/symbol-poe2areaaccessor.md",

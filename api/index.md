@@ -10,10 +10,12 @@ editor: markdown
 
 # Script API
 
-API provenance: `b63826af130ec164`.
+API provenance: `69e3a50d19574892`.
 
 ## Globals
 
+- [ActionBlocksOrdinarySkill](globals/symbol-actionblocksordinaryskill.md)
+- [ActionState](globals/symbol-actionstate.md)
 - [ActiveWeaponSetIndex](globals/symbol-activeweaponsetindex.md)
 - [Ai](globals/symbol-ai.md)
 - [Ailments](globals/symbol-ailments.md)
@@ -156,6 +158,7 @@ API provenance: `b63826af130ec164`.
 - [MouseButton](types/symbol-mousebutton.md)
 - [NetworkMessage](types/symbol-networkmessage.md)
 - [NetworkMessageRuleBuilderContext](types/symbol-networkmessagerulebuildercontext.md)
+- [PlayerActionState](types/symbol-playeractionstate.md)
 - [Poe2AiAccessor](types/symbol-poe2aiaccessor.md)
 - [Poe2AilmentsAccessor](types/symbol-poe2ailmentsaccessor.md)
 - [Poe2AreaAccessor](types/symbol-poe2areaaccessor.md)

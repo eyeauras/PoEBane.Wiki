@@ -87,7 +87,7 @@ skills, presence, missing
 CanBeUsed: boolean;
 ```
 
-Native flags, cooldown, weapon and mana/life/energy-shield checks.
+Native flags, cooldown, weapon and mana/life/energy-shield checks; false while a cost is unknown.
 This existing predicate does not include Glory or every skill-specific restriction; inspect CanBeUsedInUi separately.
 
 **@keywords**
@@ -192,10 +192,10 @@ skills, casting, stage
 ## ManaCost
 
 ```typescript
-ManaCost: number;
+ManaCost: number | null;
 ```
 
-Mana required for one use.
+Mana required for one use; null when unknown (stat unresolved or skill stats unread this frame).
 
 **@keywords**
 
@@ -204,10 +204,10 @@ skills, mana, cost
 ## LifeCost
 
 ```typescript
-LifeCost: number;
+LifeCost: number | null;
 ```
 
-Life required for one use.
+Life required for one use; null when unknown (stat unresolved or skill stats unread this frame).
 
 **@keywords**
 
@@ -216,10 +216,10 @@ skills, health, cost
 ## EsCost
 
 ```typescript
-EsCost: number;
+EsCost: number | null;
 ```
 
-Energy shield required for one use.
+Energy shield required for one use; null when unknown (stat unresolved or skill stats unread this frame).
 
 **@keywords**
 
@@ -240,10 +240,10 @@ skills, charges, capacity
 ## MaxCooldown
 
 ```typescript
-MaxCooldown: number;
+MaxCooldown: number | null;
 ```
 
-Full cooldown duration in seconds.
+Full cooldown duration in seconds; null when unknown (stat unresolved or skill stats unread this frame).
 
 **@keywords**
 
@@ -276,10 +276,10 @@ skills, cooldown, recharge
 ## CastTime
 
 ```typescript
-CastTime: number;
+CastTime: number | null;
 ```
 
-Native cast or attack duration in seconds.
+Native cast or attack duration in seconds; null when unknown (stats unresolved or skill stats unread this frame).
 
 **@keywords**
 
@@ -326,18 +326,19 @@ skills, summons, identity, deployed
 ## Stats
 
 ```typescript
-Stats: { [index: number]: Stat } & { Has(id: number): boolean };
+Stats: { [id: string]: Stat } & { Has(id: string): boolean };
 ```
 
-All decoded per-skill stats, indexed by the current game's numeric stat ID, without a selected-stat whitelist.
+All decoded per-skill stats, keyed by stat name (the client's `Stats.dat` key, as held by
+`GameStat.<Name>`), without a selected-stat whitelist.
 Values come from this skill's stats container, not the player's aggregate Stats component.
-Missing entries have Exists=false and Value=0. Numeric IDs can move between game versions.
+Missing entries have Exists=false and Value=0.
 
 **Example**
 
 ```ts
 const stats = World.Skills["dread_banner"].Stats;
-for (const id of Object.keys(stats)) Log(`${id}: ${stats[Number(id)].Value}`);
+for (const name of Object.keys(stats)) Log(`${name}: ${stats[name].Value}`);
 ```
 
 **@keywords**

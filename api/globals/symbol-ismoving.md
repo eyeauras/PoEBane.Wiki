@@ -13,6 +13,13 @@ editor: markdown
 [API index](../index.md)
 
 ```typescript
-const IsMoving: boolean;
+const IsMoving: boolean | null;
 ```
+
+Whether the player is moving, including while casting; casting alone does not set it. `null` when
+this frame has no Actor snapshot.
+
+**@keywords**
+
+walking, running, movement, pathing
 

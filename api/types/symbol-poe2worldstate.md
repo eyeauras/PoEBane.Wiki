@@ -426,8 +426,47 @@ area, name, location
 ## IsMoving
 
 ```typescript
-IsMoving: boolean;
+IsMoving: boolean | null;
 ```
+
+Whether the player is moving, including while casting; casting alone does not set it. `null` when
+this frame has no Actor snapshot.
+
+**@keywords**
+
+walking, running, movement, pathing
+
+## ActionState
+
+```typescript
+ActionState: PlayerActionState;
+```
+
+What keeps the player from starting an ordinary skill now; `Unknown` without fresh player data.
+Skill readiness (`CanBeUsed`, `CanBeUsedInUi`) does not include it: check both before pressing.
+
+**@keywords**
+
+busy, casting, stunned, interrupted, skill press
+
+## ActionBlocksOrdinarySkill
+
+```typescript
+ActionBlocksOrdinarySkill: boolean | null;
+```
+
+Whether the player's current action state keeps an ordinary skill from starting now; `null` when
+unknown, which does not mean free.
+
+**Example**
+
+```ts
+const free = ActionBlocksOrdinarySkill === false; // null stays not free
+```
+
+**@keywords**
+
+busy, casting, stunned, can cast, skill press
 
 ## Animation
 
@@ -630,7 +669,7 @@ NowMs: number;
 ## MapStats
 
 ```typescript
-MapStats: { [index: number]: Stat } & { Has(id: number): boolean };
+MapStats: { [id: string]: Stat } & { Has(id: string): boolean };
 ```
 
 ## WeaponSwapSkills

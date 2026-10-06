@@ -460,7 +460,7 @@ The element under the cursor (primary hover slot), or `None`. C# `Poe2UiAccessor
 HoverElement: Element | null;
 ```
 
-The game's secondary hover slot (+0x658; some elements register here, not in `Hover`), debounced
+The game's secondary hover slot (ActiveUiRootOffsets::UiHoverElementPtr; some elements register here, not in `Hover`), debounced
 and viewport-noise-filtered, or `None`. C# `Poe2UiAccessor.HoverElement`. LIVE-VERIFY the offset.
 
 ## Stash
