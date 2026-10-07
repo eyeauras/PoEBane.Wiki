@@ -13,6 +13,13 @@ editor: markdown
 [API index](../index.md)
 
 ```typescript
-const Animation: string;
+const Animation: string | null;
 ```
+
+Name of the animation the player is playing, or its id as text when the name is unknown; `null`
+when this frame has no Actor snapshot.
+
+**@keywords**
+
+idle, casting, attacking, motion
 

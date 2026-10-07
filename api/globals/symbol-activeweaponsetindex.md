@@ -13,6 +13,12 @@ editor: markdown
 [API index](../index.md)
 
 ```typescript
-const ActiveWeaponSetIndex: number;
+const ActiveWeaponSetIndex: number | null;
 ```
+
+The player's active weapon set; `null` without a player or when this frame's read failed.
+
+**@keywords**
+
+weapon swap, weapon set, active set
 

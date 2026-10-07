@@ -471,14 +471,27 @@ busy, casting, stunned, can cast, skill press
 ## Animation
 
 ```typescript
-Animation: string;
+Animation: string | null;
 ```
+
+Name of the animation the player is playing, or its id as text when the name is unknown; `null`
+when this frame has no Actor snapshot.
+
+**@keywords**
+
+idle, casting, attacking, motion
 
 ## AnimationId
 
 ```typescript
-AnimationId: number;
+AnimationId: number | null;
 ```
+
+Id of the animation the player is playing; `null` when this frame has no Actor snapshot.
+
+**@keywords**
+
+idle, casting, attacking, motion
 
 ## AnimationStage
 
@@ -489,8 +502,14 @@ AnimationStage: number;
 ## ActiveWeaponSetIndex
 
 ```typescript
-ActiveWeaponSetIndex: number;
+ActiveWeaponSetIndex: number | null;
 ```
+
+The player's active weapon set; `null` without a player or when this frame's read failed.
+
+**@keywords**
+
+weapon swap, weapon set, active set
 
 ## IsChatOpen
 

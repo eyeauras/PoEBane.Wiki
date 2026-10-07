@@ -24,6 +24,13 @@ Action?: string | null;
 Animation?: string | null;
 ```
 
+Name of the animation the actor is playing, or its id as text when the name is unknown; `null`
+when this frame has no Actor snapshot.
+
+**@keywords**
+
+idle, casting, attacking, motion
+
 ## CurrentAnimationId
 
 ```typescript

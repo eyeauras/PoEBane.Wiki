@@ -10,7 +10,7 @@ editor: markdown
 
 # Script API
 
-API provenance: `69e3a50d19574892`.
+API provenance: `1536f31140a88f37`.
 
 ## Globals
 

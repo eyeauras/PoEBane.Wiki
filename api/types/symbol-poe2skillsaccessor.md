@@ -95,10 +95,11 @@ skills, search, enumerate
 ## Current
 
 ```typescript
-Current: SkillInfo;
+Current: SkillInfo | null;
 ```
 
-Skill currently being used by this actor; Exists=false when no skill is active.
+Skill the actor is currently using; Exists=false when no skill is in use, null when this frame has
+no Actor snapshot.
 
 **@keywords**
 
