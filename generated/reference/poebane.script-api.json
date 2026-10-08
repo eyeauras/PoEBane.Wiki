@@ -2,7 +2,7 @@
   "schemaVersion": 4,
   "transports": ["boa_native"],
   "apiHash": "1536f31140a88f37",
-  "fingerprint": "555993adfbe0e20d",
+  "fingerprint": "59609edd88ab682a",
   "roots": [
     { "rustType": "HttpApi", "jsName": "", "exposure": "globals" },
     { "rustType": "Poe2ScriptSandbox", "jsName": "", "exposure": "globals" },
