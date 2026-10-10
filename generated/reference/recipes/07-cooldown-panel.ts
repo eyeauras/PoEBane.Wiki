@@ -37,21 +37,25 @@ function drawFlaskPanel(): void {
 }
 
 function drawSkillCooldownSummary(): void {
+  const skills = World.Skills.AllSkills;
+  if (!skills) {
+    return;
+  }
   let row = 0;
-  for (const skill of World.Skills.AllSkills) {
+  for (const skill of skills) {
     if (!skill.Exists) {
       continue;
     }
 
     const cooldown = cooldownLeft(skill);
-    if (skill.CanBeUsed && cooldown <= 0) {
+    if (skill.CanUseSkill !== false && cooldown <= 0) {
       continue;
     }
 
     Osd.DrawTextInClient(
       { X: 18, Y: 180 + row * 14 },
       `${skill.Name}: ${formatSeconds(cooldown)}`,
-      skill.CanBeUsed ? READY_COLOR : WAIT_COLOR,
+      skill.CanUseSkill === true ? READY_COLOR : WAIT_COLOR,
     );
     row++;
     if (row >= 8) {

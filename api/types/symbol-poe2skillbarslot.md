@@ -64,7 +64,7 @@ Press(): boolean;
 
 Queue this slot's actual key/chord at the current cursor. True means queued, not cast.
 Empty, unbound, ambiguous, unavailable or stale assignments return false; execution rechecks the assignment and follows Automation/input gates.
-This does not click a UI rectangle or check skill readiness. Check Skill.CanBeUsed/CanBeUsedInUi yourself;
+This does not click a UI rectangle or check skill readiness. Check Skill.CanUseSkill yourself;
 occupied primary inputs or modifiers can reject execution after queuing. Unknown/unreadable readiness should not be treated as ready.
 
 **See also**

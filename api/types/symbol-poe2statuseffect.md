@@ -120,7 +120,8 @@ buffs, duration, percentage, permanent
 Skill: SkillInfo;
 ```
 
-Resolve the source skill only when read. Buffs from other entities or unknown skills return Exists=false.
+Resolve the source skill only when read, by its exact ID pair in either weapon set. Buffs from other
+entities and skills the player lacks return Exists=false; so does an unread player, with null readiness.
 
 **@keywords**
 

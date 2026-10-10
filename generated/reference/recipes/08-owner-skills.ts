@@ -1,7 +1,8 @@
 // One helper works for Skills, WeaponSwapSkills and any entity's Skills.
 // Keywords: summons, totems, deployed, owner, weapon swap, reagent
-function liveSummons(skills: Poe2SkillsAccessor, name: string): number {
-  return skills[name].DeployedEntities.filter(entity => entity.IsAlive).length;
+function liveSummons(skills: Poe2SkillsAccessor, name: string): number | null {
+  const deployed = skills[name].DeployedEntities; // null while unknown, not 0
+  return deployed === null ? null : deployed.filter(entity => entity.IsAlive).length;
 }
 
 OnTimer(1000).Do(() => {

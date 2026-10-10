@@ -21,10 +21,11 @@ skills, owner, player, monster, weapon swap
 ## Count
 
 ```typescript
-Count: number;
+Count: number | null;
 ```
 
-Number of distinct names in this actor's skill lookup table.
+Number of distinct names in this actor's skill lookup table; null while its skills or a skill's weapon
+set are unknown (this tick's skills not read, or a skill not yet read completely).
 
 **@keywords**
 
@@ -33,10 +34,11 @@ skills, count, available
 ## Names
 
 ```typescript
-Names: string[];
+Names: string[] | null;
 ```
 
-Names available for case-insensitive lookup, ordered by dictionary key.
+Names available for case-insensitive lookup, ordered by dictionary key; null while the skills or a
+skill's weapon set are unknown.
 
 **@keywords**
 
@@ -48,7 +50,8 @@ skills, names, enumerate
 Has(name: string): boolean;
 ```
 
-Whether this owner has a skill with the given Name or InternalId, ignoring case.
+Whether this owner has a skill with the given Name or InternalId, ignoring case, in this
+collection's weapon set; false for an unresolved name.
 
 **@keywords**
 
@@ -60,9 +63,11 @@ skills, presence, lookup
 ByName(name: string): SkillInfo;
 ```
 
-Look up a skill by Name or InternalId, ignoring case; also available as Skills[name].
+Look up a skill by Name or InternalId, ignoring case; also available as Skills[name]. It finds the copy
+in this collection's weapon set; a skill bound to no set is in both.
 Dread Banner accepts "DreadBannerPlayer" or its actual InternalId "dread_banner" (not "dread_banner_player").
-Missing or ambiguous identifiers have Exists=false.
+Missing identifiers have Exists=false. So do unresolved ones, whose CanUseSkill and CanBeUsedInUi
+are null: several copies match, a copy's weapon set is unknown, or this tick's skills were not read.
 
 **@keywords**
 
@@ -74,7 +79,8 @@ skills, lookup, name, indexer, reagent
 ByNameContains(text: string): SkillInfo;
 ```
 
-First skill whose name contains the text, ignoring case; Exists=false when none matches.
+First skill whose name contains the text, ignoring case; Exists=false when none matches, also with null
+readiness while the skills are unknown.
 
 **@keywords**
 
@@ -83,10 +89,11 @@ skills, search, partial name
 ## FindByNameContains
 
 ```typescript
-FindByNameContains(text: string, limit?: number | null): SkillInfo[];
+FindByNameContains(text: string, limit?: number | null): SkillInfo[] | null;
 ```
 
-Skills whose names contain the text, ignoring case, across both weapon sets. An omitted limit returns all matches.
+Skills whose names contain the text, ignoring case, across both weapon sets; null while the skills are
+unknown. An omitted limit returns all matches.
 
 **@keywords**
 
@@ -99,7 +106,7 @@ Current: SkillInfo | null;
 ```
 
 Skill the actor is currently using; Exists=false when no skill is in use, null when this frame has
-no Actor snapshot.
+no Actor snapshot or this tick's skills were not read.
 
 **@keywords**
 
@@ -111,7 +118,8 @@ skills, casting, current
 ByNumericId(id: number, id2: number): SkillInfo | null;
 ```
 
-Find the exact pair of native skill IDs; null for an absent or out-of-range pair.
+Find the exact pair of native skill IDs in this collection's weapon set; null for an absent or
+out-of-range pair, and while the pair's weapon set or this tick's skills are unknown.
 
 **@keywords**
 
@@ -138,10 +146,11 @@ skills, binding, slot
 ## AllSkills
 
 ```typescript
-AllSkills: SkillInfo[];
+AllSkills: SkillInfo[] | null;
 ```
 
-Every named skill of this actor, ordered by name. Duplicate names and both weapon sets are retained.
+Every named skill of this actor, ordered by name. Duplicate names and both weapon sets are retained;
+null while the skills are unknown.
 
 **@keywords**
 

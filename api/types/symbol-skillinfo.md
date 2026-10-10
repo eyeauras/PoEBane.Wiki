@@ -37,8 +37,9 @@ skills, name, lookup
 InternalId: string;
 ```
 
-Identifier from ActiveSkills.dat, also accepted by Skills[id] and Skills.Has(id).
-For example DreadBannerPlayer has InternalId "dread_banner". Empty when its metadata row is unavailable.
+Skill ID, also accepted by Skills[id] and Skills.Has(id): its ActiveSkills.dat identifier, else a
+built-in name such as "Move", its ActionTypes.dat identifier or its numeric ID. For example
+DreadBannerPlayer has InternalId "dread_banner". Empty without the game's skill tables.
 
 **@keywords**
 
@@ -76,23 +77,26 @@ Exists: boolean;
 
 Whether the requested skill was found. Clearing its hotbar binding does not remove the equipped skill.
 An empty BySlotIndex lookup returns false; lookup by the still-equipped skill's name returns true.
+False too when this tick's skills or skill bar were not read or a name cannot be resolved;
+CanUseSkill and CanBeUsedInUi are then null.
 
 **@keywords**
 
 skills, presence, missing
 
-## CanBeUsed
+## CanUseSkill
 
 ```typescript
-CanBeUsed: boolean;
+CanUseSkill: boolean | null;
 ```
 
-Native flags, cooldown, weapon and mana/life/energy-shield checks; false while a cost is unknown.
-This existing predicate does not include Glory or every skill-specific restriction; inspect CanBeUsedInUi separately.
+Whether the player can use the skill now: several of the game's checks, combined once for every
+consumer. Null while Unknown and for other entities' skills; false for a missing skill. Whether
+the character is busy is separate: ActionState.
 
 **@keywords**
 
-skills, readiness, resources, cooldown
+skills, readiness, ready, cooldown, hotbar, availability
 
 ## CanBeUsedInUi
 
@@ -100,9 +104,10 @@ skills, readiness, resources, cooldown
 CanBeUsedInUi: boolean | null;
 ```
 
-The game's own hotbar readiness, including skill-specific restrictions.
-Returns null without a readable mouse/WASD button; missing skills return false. Read independently of window focus.
-The game may leave this flag stale in the background. Look up the skill again to read its current memory value.
+The game's own hotbar readiness, including skill-specific restrictions: one value for all
+the skill's slots. Returns null without a readable mouse/WASD bar, when the skill's buttons
+disagree or one shows another skill, and for an unresolved name; missing skills return false.
+Read independently of window focus; the game may leave it stale in the background.
 
 **@keywords**
 
@@ -138,7 +143,7 @@ Whether the skill declares the Glory resource through active_skill_requires_X_gl
 Cached across ticks until the skill identity/definition, stats container or Stats.dat changes.
 Tests stat presence, not its numeric value; requirement-reducing modifiers do not change this classification.
 Returns null when the stat definition or live data needed to classify the skill is unavailable.
-Failed initial reads are retried. This is not a CanBeUsed predicate.
+Failed initial reads are retried. This is not a readiness predicate.
 
 **@keywords**
 
@@ -164,30 +169,6 @@ const glory = World.Skills["DreadBannerPlayer"].Glory;
 **@keywords**
 
 skills, banner, glory, resource, charges
-
-## IsUsing
-
-```typescript
-IsUsing: boolean;
-```
-
-Whether the actor is currently using this skill.
-
-**@keywords**
-
-skills, casting, active
-
-## UseStage
-
-```typescript
-UseStage: number;
-```
-
-Native stage of the current skill use.
-
-**@keywords**
-
-skills, casting, stage
 
 ## ManaCost
 
@@ -228,10 +209,11 @@ skills, energy shield, cost
 ## MaxUses
 
 ```typescript
-MaxUses: number;
+MaxUses: number | null;
 ```
 
-Maximum stored uses reported by the skill.
+Maximum stored uses reported by the skill; 1 without a cooldown record, null when this frame's
+record is unknown.
 
 **@keywords**
 
@@ -252,10 +234,11 @@ skills, cooldown, seconds
 ## RemainingUses
 
 ```typescript
-RemainingUses: number;
+RemainingUses: number | null;
 ```
 
-Stored uses currently available.
+Stored uses currently available; 0 without a cooldown record, null when this frame's record is
+unknown.
 
 **@keywords**
 
@@ -264,10 +247,10 @@ skills, charges, available
 ## Cooldowns
 
 ```typescript
-Cooldowns: number[];
+Cooldowns: number[] | null;
 ```
 
-Remaining cooldown durations in seconds, one per recharging use.
+Remaining cooldown durations in seconds, one per recharging use; null when unknown.
 
 **@keywords**
 
@@ -291,7 +274,7 @@ skills, casting, duration
 SlotIndex: number;
 ```
 
-First matching player skill-bar slot; -1 when no player bar is available.
+First matching player skill-bar slot; -1 without a slot, a bar or this tick's skill list.
 
 **@keywords**
 
@@ -300,12 +283,13 @@ skills, binding, slot
 ## DeployedEntities
 
 ```typescript
-DeployedEntities: Entity[];
+DeployedEntities: Entity[] | null;
 ```
 
 Entity handles for this skill's deployed objects. Unresolved IDs are omitted; filter IsAlive when counting live summons.
 Resolves entities only when read and does not enumerate their skills or buffs.
-Returns an empty array after the lookup frame; read the skill again to refresh it.
+Returns an empty array after the lookup frame; read the skill again to refresh it. Null when the
+deployed objects are unknown.
 
 **@keywords**
 
@@ -314,10 +298,11 @@ skills, summons, totems, deployed, entities
 ## DeployedObjectEntityIds
 
 ```typescript
-DeployedObjectEntityIds: number[];
+DeployedObjectEntityIds: number[] | null;
 ```
 
-Native entity IDs recorded for deployed objects, including IDs no longer resolvable in the world.
+Native entity IDs recorded for deployed objects, including IDs no longer resolvable in the world;
+null when unknown.
 
 **@keywords**
 
@@ -348,7 +333,7 @@ skills, stats, modifiers, lookup
 ## CurrentStacks
 
 ```typescript
-CurrentStacks: number;
+CurrentStacks: number | null;
 ```
 
 Available stored uses, equivalent to RemainingUses.
@@ -360,7 +345,7 @@ skills, stacks, charges
 ## MaxStacks
 
 ```typescript
-MaxStacks: number;
+MaxStacks: number | null;
 ```
 
 Stored-use capacity, equivalent to MaxUses.
@@ -372,10 +357,10 @@ skills, stacks, capacity
 ## StackPercent
 
 ```typescript
-StackPercent: number;
+StackPercent: number | null;
 ```
 
-Available uses as a percentage of capacity; zero when capacity is zero.
+Available uses as a percentage of capacity; zero when capacity is zero, null when unknown.
 
 **@keywords**
 

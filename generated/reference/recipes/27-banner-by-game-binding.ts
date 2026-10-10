@@ -6,7 +6,7 @@ OnTimer(250)
   .Do(() => {
     const slot = World.SkillBar.Slots?.find(slot =>
       slot.Skill.InternalId === "dread_banner" &&
-      slot.Skill.CanBeUsed && slot.Skill.CanBeUsedInUi === true);
+      slot.Skill.CanUseSkill === true);
 
     if (slot) {
       slot.Press();

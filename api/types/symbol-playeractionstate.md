@@ -13,8 +13,8 @@ editor: markdown
 [API index](../index.md)
 
 What keeps the player from starting an ordinary skill now: of the causes that hold, the one that lets
-the fewest skills through. Skill readiness (`CanBeUsed`, `CanBeUsedInUi`) does not include it; check
-both before pressing.
+the fewest skills through. Skill readiness (`CanUseSkill`) does not include it; check both before
+pressing.
 
 **@keywords**
 

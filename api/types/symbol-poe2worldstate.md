@@ -443,7 +443,7 @@ ActionState: PlayerActionState;
 ```
 
 What keeps the player from starting an ordinary skill now; `Unknown` without fresh player data.
-Skill readiness (`CanBeUsed`, `CanBeUsedInUi`) does not include it: check both before pressing.
+Skill readiness (`CanUseSkill`) does not include it: check both before pressing.
 
 **@keywords**
 

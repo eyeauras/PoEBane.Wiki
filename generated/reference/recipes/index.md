@@ -55,7 +55,7 @@ OnTimer(250)
   .Do(() => Osd.WithTtl(2000).AddFloatingTextAtPlayer("Опасный противник рядом"));
 ```
 
-5. Defensive skill when surrounded (`22-defensive-skill.ts`): Replace my_defensive_skill with a skill name or internal ID and bind it to R. Check low HP, five nearby enemies, and CanBeUsed; this predicate does not cover every game restriction.
+5. Defensive skill when surrounded (`22-defensive-skill.ts`): Replace my_defensive_skill with a skill name or internal ID and bind it to R. Check low HP, five nearby enemies, and CanUseSkill.
 
 ```ts
 // Замените имя навыка; R должна быть его клавишей в игре.
@@ -63,7 +63,7 @@ const defensiveSkill = "my_defensive_skill";
 
 OnTimer(100)
   .If(() => !IsInPeacefulArea && Vitals.HP.Percent < 50 &&
-    MonsterCount(30) >= 5 && Skills[defensiveSkill].CanBeUsed)
+    MonsterCount(30) >= 5 && Skills[defensiveSkill].CanUseSkill === true)
   .Cooldown(1500)
   .Do(() => PressKey("R"));
 ```
@@ -122,7 +122,7 @@ OnTimer(500).Do(() => {
 });
 ```
 
-10. Dread Banner near a rare enemy (`27-banner-by-game-binding.ts`): Find Dread Banner by its internal ID and press its actual game binding when native and UI readiness permit it. The cooldown limits attempts; Press queues input rather than confirming a cast.
+10. Dread Banner near a rare enemy (`27-banner-by-game-binding.ts`): Find Dread Banner by its internal ID and press its actual game binding when CanUseSkill permits it. The cooldown limits attempts; Press queues input rather than confirming a cast.
 
 ```ts
 // Dread Banner рядом с редким противником, с учётом реальной игровой привязки.
@@ -133,7 +133,7 @@ OnTimer(250)
   .Do(() => {
     const slot = World.SkillBar.Slots?.find(slot =>
       slot.Skill.InternalId === "dread_banner" &&
-      slot.Skill.CanBeUsed && slot.Skill.CanBeUsedInUi === true);
+      slot.Skill.CanUseSkill === true);
 
     if (slot) {
       slot.Press();
@@ -461,21 +461,25 @@ function drawFlaskPanel(): void {
 }
 
 function drawSkillCooldownSummary(): void {
+  const skills = World.Skills.AllSkills;
+  if (!skills) {
+    return;
+  }
   let row = 0;
-  for (const skill of World.Skills.AllSkills) {
+  for (const skill of skills) {
     if (!skill.Exists) {
       continue;
     }
 
     const cooldown = cooldownLeft(skill);
-    if (skill.CanBeUsed && cooldown <= 0) {
+    if (skill.CanUseSkill !== false && cooldown <= 0) {
       continue;
     }
 
     Osd.DrawTextInClient(
       { X: 18, Y: 180 + row * 14 },
       `${skill.Name}: ${formatSeconds(cooldown)}`,
-      skill.CanBeUsed ? READY_COLOR : WAIT_COLOR,
+      skill.CanUseSkill === true ? READY_COLOR : WAIT_COLOR,
     );
     row++;
     if (row >= 8) {
@@ -502,8 +506,9 @@ function formatSeconds(value: number): string {
 ```ts
 // One helper works for Skills, WeaponSwapSkills and any entity's Skills.
 // Keywords: summons, totems, deployed, owner, weapon swap, reagent
-function liveSummons(skills: Poe2SkillsAccessor, name: string): number {
-  return skills[name].DeployedEntities.filter(entity => entity.IsAlive).length;
+function liveSummons(skills: Poe2SkillsAccessor, name: string): number | null {
+  const deployed = skills[name].DeployedEntities; // null while unknown, not 0
+  return deployed === null ? null : deployed.filter(entity => entity.IsAlive).length;
 }
 
 OnTimer(1000).Do(() => {
@@ -530,7 +535,7 @@ OnTimer(1000)
 // Area.Current and the explicit NotInTown/NotInHideout guards are available when knowledge matters.
 ```
 
-27. Dread Banner while AutoFollow is enabled (`10-dread-banner-autofollow.ts`): Resolve Dread Banner's actual hotbar binding and press that slot only with AutoFollow enabled, known area outside town/hideout, and native/UI readiness. Unknown readiness blocks input; Glory is not a computed threshold.
+27. Dread Banner while AutoFollow is enabled (`10-dread-banner-autofollow.ts`): Resolve Dread Banner's actual hotbar binding and press that slot only with AutoFollow enabled, known area outside town/hideout, and CanUseSkill. Unknown readiness blocks input; Glory is not a computed threshold.
 
 ```ts
 // Uses Dread Banner's actual binding in the game's active mouse/WASD hotbar.
@@ -539,7 +544,7 @@ OnTimer(1000)
 function readyBannerSlot() {
   return World.SkillBar.Slots?.find(slot =>
     slot.Hotkey !== null && slot.Skill.InternalId === "dread_banner" &&
-    slot.Skill.Exists && slot.Skill.CanBeUsed && slot.Skill.CanBeUsedInUi === true);
+    slot.Skill.Exists && slot.Skill.CanUseSkill === true);
 }
 
 OnTimer(250)
@@ -587,7 +592,7 @@ function inspectSkillButtons(hotkey: Key | string) {
       internalId: slot.Skill.InternalId,
       id: slot.Skill.Id,
       id2: slot.Skill.Id2,
-      canBeUsed: slot.Skill.CanBeUsed,
+      canUseSkill: slot.Skill.CanUseSkill,
       canBeUsedInUi: slot.Skill.CanBeUsedInUi,
     })),
   };
@@ -607,7 +612,7 @@ function pressReadySkillOn(hotkey: Key | string): boolean {
   // inspect AllByHotkey and fix the duplicate in game settings rather than guessing a slot.
   const slot = World.SkillBar.ByHotkey(hotkey);
   if (slot === null || slot.Hotkey === null || !slot.Skill.Exists) return false;
-  if (!slot.Skill.CanBeUsed || slot.Skill.CanBeUsedInUi !== true) return false;
+  if (slot.Skill.CanUseSkill !== true) return false;
   return slot.Press(); // true = queued, not proof of a cast; readiness is the caller's policy.
 }
 
@@ -617,7 +622,7 @@ function pressReadySkillOn(hotkey: Key | string): boolean {
 // Automation/foreground gates and rejects already-held primary inputs or modifiers.
 // Press also rejects a hotkey shared by multiple slots: selecting a slot cannot disambiguate input.
 // Reads work in the background, but the GAME may leave its UI readiness flag stale there.
-// CanBeUsedInUi=null means unreadable UI data; false is an unavailable, empty or unresolved skill.
+// CanUseSkill=null means Unknown (unreadable data or an unresolved name); false is an unavailable or empty skill.
 // Hotkey=null means an unbound slot. Never substitute default QWERT keys or compact out empty slots.
 // For a named skill, inspect World.SkillBar.Slots by Skill.InternalId or the exact Id/Id2 pair;
 // one skill can occupy several slots. See 10-dread-banner-autofollow.ts for an action recipe.
@@ -633,7 +638,7 @@ function pressReadySkillOn(hotkey: Key | string): boolean {
 //    const slots = World.SkillBar.AllByHotkey(Key.W);
 //    return { available: World.GameConfig.Input.IsAvailable, slots: slots?.map(slot => ({
 //      index: slot.Index, hotkey: slot.Hotkey, exists: slot.Skill.Exists,
-//      name: slot.Skill.Name, ready: slot.Skill.CanBeUsedInUi
+//      name: slot.Skill.Name, ready: slot.Skill.CanUseSkill
 //    })) ?? null };
 // 3. If the job is pending, use script_control_job_wait with its jobId; inspect errors explicitly.
 // Return scalar projections like the above rather than opaque native handles.

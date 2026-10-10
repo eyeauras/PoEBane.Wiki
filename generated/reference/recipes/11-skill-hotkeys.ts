@@ -20,7 +20,7 @@ function inspectSkillButtons(hotkey: Key | string) {
       internalId: slot.Skill.InternalId,
       id: slot.Skill.Id,
       id2: slot.Skill.Id2,
-      canBeUsed: slot.Skill.CanBeUsed,
+      canUseSkill: slot.Skill.CanUseSkill,
       canBeUsedInUi: slot.Skill.CanBeUsedInUi,
     })),
   };
@@ -40,7 +40,7 @@ function pressReadySkillOn(hotkey: Key | string): boolean {
   // inspect AllByHotkey and fix the duplicate in game settings rather than guessing a slot.
   const slot = World.SkillBar.ByHotkey(hotkey);
   if (slot === null || slot.Hotkey === null || !slot.Skill.Exists) return false;
-  if (!slot.Skill.CanBeUsed || slot.Skill.CanBeUsedInUi !== true) return false;
+  if (slot.Skill.CanUseSkill !== true) return false;
   return slot.Press(); // true = queued, not proof of a cast; readiness is the caller's policy.
 }
 
@@ -50,7 +50,7 @@ function pressReadySkillOn(hotkey: Key | string): boolean {
 // Automation/foreground gates and rejects already-held primary inputs or modifiers.
 // Press also rejects a hotkey shared by multiple slots: selecting a slot cannot disambiguate input.
 // Reads work in the background, but the GAME may leave its UI readiness flag stale there.
-// CanBeUsedInUi=null means unreadable UI data; false is an unavailable, empty or unresolved skill.
+// CanUseSkill=null means Unknown (unreadable data or an unresolved name); false is an unavailable or empty skill.
 // Hotkey=null means an unbound slot. Never substitute default QWERT keys or compact out empty slots.
 // For a named skill, inspect World.SkillBar.Slots by Skill.InternalId or the exact Id/Id2 pair;
 // one skill can occupy several slots. See 10-dread-banner-autofollow.ts for an action recipe.
@@ -66,7 +66,7 @@ function pressReadySkillOn(hotkey: Key | string): boolean {
 //    const slots = World.SkillBar.AllByHotkey(Key.W);
 //    return { available: World.GameConfig.Input.IsAvailable, slots: slots?.map(slot => ({
 //      index: slot.Index, hotkey: slot.Hotkey, exists: slot.Skill.Exists,
-//      name: slot.Skill.Name, ready: slot.Skill.CanBeUsedInUi
+//      name: slot.Skill.Name, ready: slot.Skill.CanUseSkill
 //    })) ?? null };
 // 3. If the job is pending, use script_control_job_wait with its jobId; inspect errors explicitly.
 // Return scalar projections like the above rather than opaque native handles.

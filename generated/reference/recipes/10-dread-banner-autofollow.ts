@@ -4,7 +4,7 @@
 function readyBannerSlot() {
   return World.SkillBar.Slots?.find(slot =>
     slot.Hotkey !== null && slot.Skill.InternalId === "dread_banner" &&
-    slot.Skill.Exists && slot.Skill.CanBeUsed && slot.Skill.CanBeUsedInUi === true);
+    slot.Skill.Exists && slot.Skill.CanUseSkill === true);
 }
 
 OnTimer(250)
